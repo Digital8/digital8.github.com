@@ -1,0 +1,288 @@
+@url: "http://wallcreations.digital8.com.au/magento/skin/frontend/default/wallcreations";
+
+@import "_reset.less";
+@import "_mixins.less";
+@import "_grid.less";
+
+/* @group colors */
+
+@color-text: #000;
+@color-accent: #bada55;
+
+/* @end */
+
+/* @group fonts */
+
+.font-family {
+	font-family: "proxima-nova", sans-serif;
+}
+.thin {
+	font-family: "proxima-nova-n1", "proxima-nova", sans-serif;
+	font-weight: 100;
+}
+.light {
+	font-family: "proxima-nova-n3", "proxima-nova", sans-serif;
+	font-weight: 300;
+}
+.regular {
+	font-family: "proxima-nova-n4", "proxima-nova", sans-serif;
+	font-weight: 400;
+}
+.semibold {
+	font-family: "proxima-nova-n6", "proxima-nova", sans-serif;
+	font-weight: 600;
+}
+.bold {
+	font-family: "proxima-nova-n7", "proxima-nova", sans-serif;
+	font-weight: 700;
+}
+.extrabold {
+	font-family: "proxima-nova-n8", "proxima-nova", sans-serif;
+	font-weight: 800;
+}
+.black {
+	font-family: "proxima-nova-n9", "proxima-nova", sans-serif;
+	font-weight: 900;
+}
+
+/* @end */
+
+/* @group animation effects */
+
+.animation-bubble-light {
+	-webkit-animation-name: bubble-light;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+	
+	-moz-animation-name: bubble-light;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+	
+	-o-animation-name: bubble-light;
+	-webkit-animation-iteration-count: infinite;
+	-o-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+	
+	animation-name: bubble-light;
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+}
+
+.animation-bubble-dark {
+	-webkit-animation-name: bubble-dark;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+	
+	-moz-animation-name: bubble-dark;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+	
+	-o-animation-name: bubble-dark;
+	-webkit-animation-iteration-count: infinite;
+	-o-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+	
+	animation-name: bubble-dark;
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+}
+
+@keyframes bubble-light {
+	0% {
+		.box-shadow(~"none");
+	}
+	50% {
+		.box-shadow(~"0px 0px 0px 10px rgba(255,255,255,0.4)");
+	}
+	100% {
+		.box-shadow(~"none");
+	}
+}
+
+@-moz-keyframes bubble-light { /* Firefox */
+	0% {
+		.box-shadow(~"none");
+	}
+	50% {
+		.box-shadow(~"0px 0px 0px 10px rgba(255,255,255,0.4)");
+	}
+	100% {
+		.box-shadow(~"none");
+	}
+}
+
+@-webkit-keyframes bubble-light { /* Safari and Chrome */
+	0% {
+		.box-shadow(~"none");
+	}
+	50% {
+		.box-shadow(~"0px 0px 0px 10px rgba(255,255,255,0.4)");
+	}
+	100% {
+		.box-shadow(~"none");
+	}
+}
+
+@-o-keyframes bubble-light { /* Opera */
+	0% {
+		.box-shadow(~"none");
+	}
+	50% {
+		.box-shadow(~"0px 0px 0px 10px rgba(255,255,255,0.4)");
+	}
+	100% {
+		.box-shadow(~"none");
+	}
+}
+
+@keyframes bubble-dark {
+	0% {
+		.box-shadow(~"none");
+	}
+	50% {
+		.box-shadow(~"0px 0px 0px 10px rgba(0,0,0,0.5)");
+	}
+	100% {
+		.box-shadow(~"none");
+	}
+}
+
+@-moz-keyframes bubble-dark { /* Firefox */
+	0% {
+		.box-shadow(~"none");
+	}
+	50% {
+		.box-shadow(~"0px 0px 0px 10px rgba(0,0,0,0.5)");
+	}
+	100% {
+		.box-shadow(~"none");
+	}
+}
+
+@-webkit-keyframes bubble-dark { /* Safari and Chrome */
+	0% {
+		.box-shadow(~"none");
+	}
+	50% {
+		.box-shadow(~"0px 0px 0px 10px rgba(0,0,0,0.5)");
+	}
+	100% {
+		.box-shadow(~"none");
+	}
+}
+
+@-o-keyframes bubble-dark { /* Opera */
+	0% {
+		.box-shadow(~"none");
+	}
+	50% {
+		.box-shadow(~"0px 0px 0px 10px rgba(0,0,0,0.5)");
+	}
+	100% {
+		.box-shadow(~"none");
+	}
+}
+
+/* @end */
+
+/* @group body styles */
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: #000 url(../images/fox-door.jpg) no-repeat center top;
+	background-size: auto 100%;
+    .font-family;
+    font-size: 16px;
+    .regular;
+    color: @color-text;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* @end */
+
+/* @group content */
+
+#content {
+	padding-top: 3em;
+	
+	> div {
+		.inline-block;
+		text-align: center;
+	}
+	
+	#intro {
+		width: 13em;
+		margin-bottom: 0.7em;
+	}
+	
+	#social {
+		li {
+			.inline-block;
+			
+			+ li {
+				margin-left: 0.7em;
+			}
+			
+			a {
+				display: block;
+				width: 2.75em;
+				height: 2.75em;
+				.round;
+				background-color: #000;
+				background-repeat: no-repeat;
+				background-position: center top;
+				background-size: 100% 200%;
+				.transition(all, 0.3s);
+				
+				&:hover {
+					.animation-bubble-dark;
+					background-position: center bottom;
+				}
+				
+				&#behance {
+					background-image: url(../images/icons/behance.png);
+					
+					&:hover {
+						background-color: #1769ff;
+					}
+				}
+				
+				&#dribbble {
+					background-image: url(../images/icons/dribbble.png);
+					
+					&:hover {
+						background-color: #ea4c88;
+					}
+				}
+				
+				&#email {
+					background-image: url(../images/icons/email.png);
+					
+					&:hover {
+						background-color: #bada55;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* @end */
+
+
+
+
+
+
+
+@import "_media.less";

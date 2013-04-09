@@ -1,12 +1,50 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/* @group widescreen */
+@media screen and (min-width: 1700px) {
+	/* @group grid */
+	
+	.row {
+		width: 1260px;
+	}
+	
+	#content {
+		height: 1000px;
+		
+		> div {
+//			margin-left: 14em;
+		}
+	}
+	
+	/* @end */
+	
+	/* @group body styles */
+	
+	body {
+		font-size: 20px;
+	}
+	
+	/* @end */
+}
+/* @end */
+
+
+
 /* @group tablet */
 @media screen and (max-width: 1300px) and (min-width: 761px) {
 	/* @group grid */
 	
 	.row {
-		width: 500px;
+		width: 760px;
+	}
+	
+	#content {
+		height: 650px;
+		
+		> div {
+			margin-left: 14em;
+		}
 	}
 	
 	/* @end */
@@ -29,6 +67,23 @@
 	
 	.row {
 		width: 320px;
+	}
+	
+	#content {
+		height: 100%;
+		max-height: 480px;
+		background-size: auto 117%;
+		background-position: -150px top;
+		padding-top: 1em;
+		.box-shadow(~"inset -10px -10px 30px 10px #000");
+		
+		> div {
+			margin-left: 3em;
+		}
+		
+		#intro {
+			width: 17em;
+		}
 	}
 	
 	/* @end */

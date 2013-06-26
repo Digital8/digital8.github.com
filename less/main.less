@@ -1,0 +1,517 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.transition(@property, @duration){
+    -webkit-transition: @property @duration ease-in-out;
+    -moz-transition: @property @duration ease-in-out;
+    -o-transition: @property @duration ease-in-out;
+    -ms-transition: @property @duration ease-in-out;
+    transition: @property @duration ease-in-out;
+}
+.border-radius(@radius){
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    -ms-border-radius: @radius;
+    border-radius: @radius;
+}
+body{
+    background: #000 url(../img/bg.jpg) center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    color: #FFF;
+    font-family: 'Open Sans';
+    font-size: 24pt;
+    font-weight: 300;
+    text-align: center;
+    line-height: 38pt;
+    -webkit-font-smoothing: antialiased;
+}
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1,h2,p{
+    margin-top: 0;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+h1{
+    font-size: 1.250em;
+    font-weight: 400;
+    strong{
+        font-weight: 600;
+    }
+}
+strong{
+    font-weight: 400;
+}
+a{
+    color: #97c547;
+    text-decoration: none;
+    .transition(all, .1s);
+    .border-radius(2px);
+    padding: 0 5px;
+    &:hover{
+        background: #97c547;
+        color: #FFF;
+    }
+}
+div.container{
+    margin: 0 auto;
+    padding: 30px auto;
+    width: 740px;
+    header.logo{
+        background: url(../img/logo.png);
+        background-size: 100%;
+        display: block;
+        height: 144px;
+        margin: 0 auto 50px auto;
+        width: 144px;
+    }
+    section{
+        border-bottom: 1px solid #666;
+        padding: 50px 0;
+        header{
+            h1{
+                color: #97c547;
+                font-size: 0.938em;
+                font-weight: 600;
+                margin-bottom: 50px;
+                text-transform: uppercase;
+            }
+        }
+        &[role=portfolio]{
+            overflow: auto;
+            ul{
+                li{
+                    display: block;
+                    float: left;
+                    margin-right: 40px;
+                    &:last-child{
+                        margin: 0;
+                    }
+                    a{
+                        background: #FFF;
+                        .border-radius(110px);
+                        display: block;
+                        padding: 0;
+                        height: 220px;
+                        margin-bottom: 20px;
+                        width: 220px;
+                    }
+                    h2{
+                        font-size: 0.813em;
+                        font-weight: 300;
+                    }
+                }
+                a{
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    -ms-background-size: cover;
+                    background-size: cover;
+                }
+                li.property-owl{
+                    a{
+                        background: url(../img/property-owl.jpg);
+                        &:hover{
+                            background: url(../img/property-owl-gray.jpg);
+                        }
+                    }
+                }
+                li.hunt-migration{
+                    a{
+                        background: url(../img/hunt-migration.jpg);
+                        &:hover{
+                            background: url(../img/hunt-migration-gray.jpg);
+                        }
+                    }
+                }
+                li.etrade-summit{
+                    a{
+                        background: url(../img/etrade.jpg);
+                        &:hover{
+                            background: url(../img/etrade-gray.jpg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+div.dodgyload{
+    display: none;
+    &.po{
+        background: url(../img/property-owl-gray.jpg);
+    }
+    &.hm{
+        background: url(../img/hunt-migration-gray.jpg);
+    }
+    &.es{
+        background: url(../img/etrade-gray.jpg);
+    }
+}
+@media (max-width: 1024px){
+    body{
+        font-size: 20pt;
+        line-height: 1.5em;
+    }
+    div.container{
+        width: 540px;
+        section{
+        &[role=portfolio]{
+            overflow: auto;
+                ul{
+                    li{
+                        display: block;
+                        padding-bottom: 40px;
+                        width: 100%;
+                        a{
+                            margin: 0 auto 20px auto;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media (max-width: 568px){
+    body{
+        font-size: 12pt;
+        line-height: 1.5em;
+    }
+    div.container{
+        width: 280px;
+        section{
+            padding: 30px 0;
+            header.logo{
+                height: 120px;
+                margin-bottom: 30px;
+                width: 120px;
+            }
+            header{
+                h1{   
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                }
+            }
+            &[role=portfolio]{
+            overflow: auto;
+                ul{
+                    li{
+                        display: block;
+                        padding-bottom: 20px;
+                        width: 100%;
+                        a{
+                            height: 180px;
+                            margin: 0 auto 10px auto;
+                            width: 180px;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

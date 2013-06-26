@@ -1,122 +1,54 @@
-/* @group mixins */
+/* @group testing */
 
-/* testing */
-.test-border-1, .test1 {
+.test1 {
 	border: 1px solid fuchsia !important;
 }
-.test-border-2, .test2 {
+
+.test2 {
 	border: 1px solid aqua !important;
 }
-.test-border-3, .test3 {
+
+.test3 {
 	border: 1px solid lime !important;
 }
 
-/* shadows */
-.text-shadow(@arguments: "0px 1px 1px rgba(0,0,0,0.5)"){
-	text-shadow: @arguments;
-}
+/* @end */
+
+/* @group shadows */
+
 .box-shadow (@arguments: "0px 0px 1px rgba(0,0,0,0.5)") {
 	box-shadow: @arguments;
 	-moz-box-shadow: @arguments;
 	-webkit-box-shadow: @arguments;
 	behavior: url("@{url}/js/libs/pie/PIE.htc");
 }
-
-/* border radius */
-.rounded (@radius: 5px){
-	.rounded-top-left(@radius);
-	.rounded-top-right(@radius);
-	.rounded-bottom-left(@radius);
-	.rounded-bottom-right(@radius);
-	-moz-border-radius: @radius;
-	-webkit-border-radius: @radius;
-	border-radius: @radius;
-	behavior: url("@{url}/js/libs/pie/PIE.htc");
-}
-.rounded-top-left (@radius: 5px){
-	-webkit-border-top-left-radius: @radius;
-	-moz-border-radius-topleft: @radius;
-	border-top-left-radius: @radius;
-}
-.rounded-top-right (@radius: 5px){
-	-webkit-border-top-right-radius: @radius;
-	-moz-border-radius-topright: @radius;
-	border-top-right-radius: @radius;
-}
-.rounded-bottom-left (@radius: 5px){
-	-webkit-border-bottom-left-radius: @radius;
-	-moz-border-radius-bottomleft: @radius;
-	border-bottom-left-radius: @radius;
-}
-.rounded-bottom-right (@radius: 5px){
-	-webkit-border-bottom-right-radius: @radius;
-	-moz-border-radius-bottomright: @radius;
-	border-bottom-right-radius: @radius;
-}
-.round {
-	.rounded(3000px);
-}
-
-/* transitions */
-.transition(@property, @duration){
-	-webkit-transition: @property @duration ease-in-out;
-	-moz-transition: @property @duration ease-in-out;
-}
-.multi-transition(@transition){
-	-webkit-transition: @transition;
-	-moz-transition: @transition;
-}
-
-/* opacity */
-.opacity(@alpha){
-	-moz-opacity: @alpha;
-	opacity: @alpha;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"("Opacity=@{alpha*100}");
-}
-
-/* animation smoothing and elastic scrolling */
-.elastic-scrolling {
-	.animation-smoothing;
-	-webkit-overflow-scrolling: touch;
-}
-.animation-smoothing {
-	-webkit-transform: translateZ(0px);
-}
-
-/* clearfix */
-.clearfix {
-	zoom: 1;
-	&:before,
-	&:after {
-		content: ""; 
-		display: table;
-	}
-	&:after {
-		clear: both;
-	}
-}
-
-.clear {
-	clear: both;
-}
-
-/* positioning and sizing */
-.inline-block {
-	display: -moz-inline-stack;
-	display: inline-block;
-	zoom: 1;
-	*display: inline;
-}
-.left {
-	float: left;
-}
-.right {
-	float: right;
-}
-.center {
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: -1000px;
-}
-
+	
 /* @end */
+
+/* @group border radius */
+
+.border-radius(@radius){
+	-webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    -ms-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.border-radius(@tr; @br; @bl; @tl){
+	-webkit-border-radius: @tr, @br, @bl, @tl;
+    -moz-border-radius: @tr, @br, @bl, @tl;
+    -o-border-radius: @tr, @br, @bl, @tl;
+    -ms-border-radius: @tr, @br, @bl, @tl;
+    border-radius: @tr, @br, @bl, @tl;
+}
+
+.transition(@property; @time; @ease;){
+	-webkit-transition: @property @time @ease;
+    -moz-transition: @property @time @ease;
+    -o-transition: @property @time @ease;
+    -ms-transition: @property @time @ease;
+    transition: @property @time @ease;
+}
+
+

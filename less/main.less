@@ -155,7 +155,7 @@ a{
 }
 div.container{
     margin: 0 auto;
-    padding: 30px auto;
+    padding: 30px 0;
     width: 740px;
     header.logo{
         background: url(../img/logo.png);
@@ -253,6 +253,33 @@ div.container{
             }
         }
     }
+    footer{
+        padding-top: 10px;
+        a{
+            color: #FFF;
+            padding-right: 20px;
+            &:hover{
+                background: none;
+                color: #97c547;
+            }
+        }
+        span{
+            display: inline-block;
+            font-size: .75em;
+            font-weight: 300;
+            line-height: 30px;
+            &.location{
+                background: url(../img/icon-location.png) left center no-repeat;
+                background-size: 17px 22px;
+                padding-left: 24px;
+            }
+            &.phone{
+                background: url(../img/icon-phone.png) left center no-repeat;
+                background-size: 20px 22px;
+                padding-left: 28px;
+            }
+        }
+    }
 }
 @media (max-width: 1024px){
     body{
@@ -275,6 +302,11 @@ div.container{
                     }
 
                 }
+            }
+        }
+        footer{
+            a{
+                padding: 0;
             }
         }
     }    
